@@ -22,7 +22,7 @@ setResults=(body,header,statusCode)=>{
     Results:{
       statusCode,
       header,
-      Body,
+      body,
     }
   })
 }
@@ -30,7 +30,7 @@ setResults=(body,header,statusCode)=>{
     return (
       <React.Fragment>
         <Header />
-        <Form />
+        <Form onReciveresaults={this.setResults}/>
         <Footer />
       </React.Fragment>
     );

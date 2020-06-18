@@ -16,7 +16,7 @@ class Form extends React.Component {
  
   }
   
-  const ResponseFunction = prop=>{
+ 
 
     async function loadData(e){
       
@@ -28,7 +28,7 @@ class Form extends React.Component {
    
     
     }
-    }
+    
 
   handleSubmit = e => {
     e.preventDefault();
