@@ -31,6 +31,7 @@ setResults=(body,header,statusCode)=>{
       <React.Fragment>
         <Header />
         <Form onReciveresaults={this.setResults}/>
+        <Results body={this.state.Results}/>
         <Footer />
       </React.Fragment>
     );
