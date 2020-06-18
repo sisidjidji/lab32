@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom/extend-expect';
+
 
 // Configure Enzyme to support React 16
 import { configure } from 'enzyme';
