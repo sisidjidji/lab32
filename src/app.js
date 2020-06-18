@@ -4,6 +4,7 @@ import './app.scss';
 import Header from './components/header';
 import Footer from './components/footer';
 import Form from './components/form';
+import Results from './components/result';
 
 
 
@@ -12,17 +13,23 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      Results:{
       body : null,
       header:null,
       statusCode : null,
+
+      },
     };
   }
+
+
 setResults=(body,header,statusCode)=>{
   this.setState({
     Results:{
-      statusCode,
-      header,
       body,
+      header,
+      statusCode,
+     
     }
   })
 }
@@ -30,7 +37,7 @@ setResults=(body,header,statusCode)=>{
     return (
       <React.Fragment>
         <Header />
-        <Form onReciveresaults={this.setResults}/>
+        <Form onReceiveResults={this.setResults}/>
         <Results body={this.state.Results}/>
         <Footer />
       </React.Fragment>

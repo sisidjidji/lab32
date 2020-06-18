@@ -14,16 +14,16 @@ class Form extends React.Component {
   }
 
  
-  }
+  
   
  
 
-    async function loadData(e){
+    async loadData(){
       
       let response = await fetch (this.state.url);
       let body = await response.json();
-      let headers = [...response.headers.entries()];
-      let statusCode= response.json.status;
+      let header = [...response.headers.entries()];
+      let statusCode= response.status;
       this.props.onReceiveResults(body, header, statusCode);  
    
     
@@ -41,6 +41,7 @@ class Form extends React.Component {
         method: this.state.method,
       };
 
+      this.loadData();
       // Clear old settings
       let url = '';
       let method = '';
