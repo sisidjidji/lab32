@@ -4,10 +4,14 @@ import JSONPretty from 'react-json-pretty';
 
 var JSONPrettyMon = require('react-json-pretty/dist/acai');
 
-export default  defaultResault(prop)
+export default  function Result (prop)
 {
 return(
-<JSONPretty id="json-pretty" data={prop.body}> theme={JSONPrettyMon} </JSONPretty>
+    <>
+    <span>
+<JSONPretty id="json-pretty" data={prop.body} theme={JSONPrettyMon} />
+   </span>
+   </>
 )
 }
 
