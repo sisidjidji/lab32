@@ -12,7 +12,23 @@ class Form extends React.Component {
       request: {},
     };
   }
+
+ 
+  }
   
+  const ResponseFunction = prop=>{
+
+    async function loadData(e){
+      
+      let response = await fetch (this.state.url);
+      let body = await response.json();
+      let headers = [...response.headers.entries()];
+      let statusCode= response.json.status;
+      this.props.onReceiveResults(body, header, statusCode);  
+   
+    
+    }
+    }
 
   handleSubmit = e => {
     e.preventDefault();
